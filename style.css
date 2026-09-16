@@ -1,0 +1,19 @@
+body {
+    background-color: #2148C0;
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+form {
+    background-color: lightgray;
+    padding: 16px;
+    border-radius: 5px;
+    max-width: 500px;
+}
