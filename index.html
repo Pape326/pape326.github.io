@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+<h1>Список ссылок</h1>
+<ul>
+    <li><a href="http://kubsu.ru">1. Абсолютная гиперссылка на КубГУ</a></li>
+
+    <li><a href="https://www.kubsu.ru/index.php">2. Абсолютная по https КубГУ</a></li>
+
+    <li>
+        3. Ссылка-изображение:<br>
+        <a href="http://kubsu.ru"><img src="img/image.jpg" width="150" height="150" alt="Фото КубГУ"></a>
+    </li>
+
+    <li><a href="/second.html">4. Сокращенная ссылка на внутреннюю страницу</a></li>
+
+    <li><a href="/">5. Сокращенная ссылка на главную страницу</a></li>
+
+    <li><a href="#tag">6. Ссылка на фрагмент текущей страницы</a></li>
+
+    <li><a href="https://www.kubsu.ru/ru/search/content?query=%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5&amp;page=1&amp;sort=asc">7. Ссылка с тремя параметрами в URL</a></li>
+
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%B9_%D0%AE%D0%BB%D0%B8%D0%B9_%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D1%8C?id=9">8. Ссылка с параметром id в URL</a></li>
+
+    <li><a href="./second.html">9. Относительная на страницу в текущем каталоге</a></li>
+
+    <li><a href="./about/index.html">10. Относительная на страницу в каталоге about</a></li>
+
+    <li><a href="../parent.html">11. Относительная на страницу в каталоге уровнем выше</a></li>
+
+    <li><a href="../../root.html">12. Относительная на страницу в каталоге двумя уровнями выше</a></li>
+
+    <li>
+        <p>13.<a href="https://kubsu.ru">контекстная ссылка</a> прямо в тексте абзаца.</p>
+    </li>
+
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%B9_%D0%AE%D0%BB%D0%B8%D0%B9_%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D1%8C#mwYw">14. Ссылка на фрагмент страницы стороннего сайта</a></li>
+
+    <li>
+        15. Ссылки из прямоугольной и круглой областей картинки (тег map):<br>
+        <img src="img/image.jpg" width="200" height="200" alt="Навигационная карта" usemap="#navmap">
+        <map name="navmap">
+            <area shape="rect" coords="10,10,90,90" href="https://kubsu.ru" alt="Прямоугольная ссылка">
+            <area shape="circle" coords="150,150,40" href="https://ya.ru" alt="Круглая ссылка">
+        </map>
+    </li>
+
+    <li><a href="">16. Ссылка с пустым href</a></li>
+
+    <li><a>17. Ссылка без href</a></li>
+
+    <li><a href="https://kubsu.ru" rel="nofollow">18. Ссылка, по которой запрещен переход поисковикам</a></li>
+
+    <li>
+        <noindex>
+        <a href="https://kubsu.ru/">19. Запрещенная для индексации поисковиками ссылка</a>
+        </noindex>
+    </li>
+
+    <li>
+        20. Нумерованный список ссылок с подписями title:
+        <ol id="tag">
+            <li><a href="https://kubsu.ru" title="Главная страница КубГУ">Сайт КубГУ</a></li>
+            <li><a href="https://github.com" title="Сайт для разработчиков">GitHub</a></li>
+        </ol>
+    </li>
+
+        <!--  Скорее всего рабочий вариант открыт FTP на впс -->
+    <li><a href="ftp://student:test123@9.205.153.144/file.txt">21. Ссылка на файл на сервере FTP с авторизацией</a></li>
+
+    <br>
+    <li><a href="form.html">Ссылка на страницу с формами</a> </li>
+</ul>
+</body>
+</html>
