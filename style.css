@@ -1,65 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
-
-/* Стили хедера */
+/* стили header */
+.header,
+header,
+.content,
+.footer {
+    width: 100%;
+}
 
 header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    background-color: #bad3e9;
-}
-
-.menu {
-    grid-column: 3;
-    justify-self: end;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #bad3e9;
     gap: 15px;
 }
 
-.menu a {
-    font-size: large;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
+.logo {
+    width: 60px;
+    height: auto;
 }
 
 h1 {
-    grid-column: 2;
     margin: 0;
     text-align: center;
+    font-size: 1.4rem;
 }
 
-.logo {
-    grid-column: 1;
-    justify-self: start;
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 5px;
 }
 
+.menu a {
+    font-size: 1.1rem;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
 
-/* Стили контента  */
+/* --- Стили контента на мобильных--- */
 .content {
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
     flex: 1 0 auto;
-    justify-items: center;
-    gap: 30px;
+    padding: 15px;
+    gap: 25px;
 }
 
-.link{
-    grid-column: 1;
+.table {
+    order: 1;
+    width: 100%;
+    overflow-x: auto;
 }
+
+.link {
+    order: 2;
+    width: 100%;
+    word-break: break-word;
+}
+
+.form-block {
+    order: 3;
+    width: 100%;
+}
+
 
 table {
     width: 100%;
@@ -67,35 +89,83 @@ table {
     margin-top: 10px;
 }
 
-
 th, td {
     border: 1px solid #b7b7b7;
     padding: 10px;
     text-align: left;
 }
 
-
 th {
     background-color: #cfe2f3;
     font-weight: bold;
 }
 
+.chet {
+    background-color: #ffffff;
+}
+
 .nechet {
     background-color: lightgray;
 }
-
-.chet{
-
-}
-
-
-/* Стили футера */
-.footer{
-    min-width: 100vh;
+/* стили футера */
+.footer {
     flex-shrink: 0;
     text-align: center;
-    min-height: 100px;
+    padding: 20px 10px;
     background-color: lightgray;
-
 }
 
+@media (min-width: 768px) {
+
+    /* Шапка на ПК*/
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    h1 {
+        grid-column: 2;
+    }
+
+
+    .menu {
+        grid-column: 3;
+        justify-self: end;
+        flex-direction: row;
+        width: auto;
+        gap: 15px;
+    }
+
+    .menu a {
+        background-color: transparent;
+        padding: 5px 10px;
+    }
+
+    /* стили контента */
+    .content {
+        max-width: 960px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .link {
+        order: 1;
+    }
+
+    .table {
+        order: 2;
+    }
+
+    .form-block {
+        order: 3;
+    }
+}
