@@ -1,0 +1,43 @@
+header {
+    background-color: #bad3e9;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #cfe2f3;
+}
+
+.chet {
+    background-color: #ffffff;
+}
+
+.nechet {
+    background-color: lightgray;
+}
+
+.language-select {
+    width: 100px;
+}
+
+footer {
+    background-color: lightgray;
+}
