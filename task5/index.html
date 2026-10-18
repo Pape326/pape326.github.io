@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5 — Калькулятор стоимости</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <form id="order-form">
+        <label for="product">Товар:</label>
+        <select id="product" name="product">
+            <option value="65000">Ноутбук — 65 000 руб.</option>
+            <option value="40000">Смартфон — 40 000 руб.</option>
+            <option value="7000">Беспроводные наушники — 7 000 руб.</option>
+            <option value="15000">Монитор — 15 000 руб.</option>
+        </select>
+
+        <label for="quantity">Количество:</label>
+        <input type="text" id="quantity" name="quantity" placeholder="Введите количество">
+        <div id="error-message" class="error-msg" aria-live="polite"></div>
+
+        <button type="button" id="calc-btn">Рассчитать стоимость</button>
+
+        <div id="result" class="result-msg" aria-live="polite"></div>
+    </form>
+</body>
+</html>
