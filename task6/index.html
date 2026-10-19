@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика WEB: Задание 6</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <form id="calc-form">
+        <div class="field-block">
+            <label for="quantity">Количество устройств: </label>
+            <input type="text" id="quantity" name="quantity" value="1" placeholder="Введите количество">
+            <div id="error-message" class="error-msg" aria-live="polite"></div>
+        </div>
+
+        <div class="field-block">
+            <label>Тип услуги:</label>
+            <div class="radios-group">
+                <label class="radio-item">
+                    <input type="radio" name="service-type" value="type1" checked>
+                    Чистка от пыли и замена термопасты — 1 500 руб.
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="service-type" value="type2">
+                    Настройка ОС и ПО — 2 500 руб.
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="service-type" value="type3">
+                    Апгрейд комплектующих — 3 500 руб.
+                </label>
+            </div>
+        </div>
+
+        <div id="options-block" class="field-block is-hidden">
+            <label for="service-option">Пакет программного обеспечения:</label>
+            <select id="service-option" name="service-option">
+                <option value="0">Базовый набор — 0 руб.</option>
+                <option value="1000">Офисный пакет — 1 000 руб.</option>
+                <option value="2200">Профессиональный пакет — 2 200 руб.</option>
+            </select>
+        </div>
+
+        <div id="property-block" class="field-block is-hidden">
+            <label class="checkbox-item" for="service-property">
+                <input type="checkbox" id="service-property" name="service-property" value="800">
+                Премиальные термопрокладки (+800 руб.)
+            </label>
+        </div>
+
+        <div id="result" class="result-msg" aria-live="polite"></div>
+    </form>
+</body>
+</html>

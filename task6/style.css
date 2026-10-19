@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 40px auto;
+    max-width: 420px;
+    padding: 0 20px;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #ffffff;
+    padding: 24px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.field-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+select {
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.radios-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-item,
+.checkbox-item {
+    font-weight: 400;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.error-msg {
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.result-msg {
+    margin-top: 4px;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    color: green;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.result-msg:empty {
+    display: none;
+}
