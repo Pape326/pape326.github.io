@@ -1,13 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практика WEB: Задание 7</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="gallery-card">
+        <h1 class="gallery-title">Галерея изображений</h1>
 
+        <div class="gallery-wrapper">
+            <button type="button" id="arrow-prev" class="slider-btn" aria-label="Предыдущий слайд">&#10094;</button>
+
+            <div class="gallery-slider">
+                <div class="slide-item">
+                    <img src="img/1img.jpg" alt="Изображение 1">
+                </div>
+                <div class="slide-item">
+                    <img src="img/2img.jpeg" alt="Изображение 2">
+                </div>
+                <div class="slide-item">
+                    <img src="img/3img.jpeg" alt="Изображение 3">
+                </div>
+                <div class="slide-item">
+                    <img src="img/4img.jpeg" alt="Изображение 4">
+                </div>
+                <div class="slide-item">
+                    <img src="img/5img.jpg" alt="Изображение 5">
+                </div>
+                <div class="slide-item">
+                    <img src="img/6img.jpeg" alt="Изображение 6">
+                </div>
+                <div class="slide-item">
+                    <img src="img/7img.jpeg" alt="Изображение 7">
+                </div>
+                <div class="slide-item">
+                    <img src="img/8img.jpeg" alt="Изображение 8">
+                </div>
+            </div>
+
+            <button type="button" id="arrow-next" class="slider-btn" aria-label="Следующий слайд">&#10095;</button>
+        </div>
+
+        <div class="pager-block" aria-live="polite">
+            <div id="pager-dots" class="pager-dots"></div>
+            <div class="pager-text">
+                Страница <span id="pager-current">1</span> из <span id="pager-total">3</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
