@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика WEB: Задание 8</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main class="page-card">
+        <h1 class="page-title">Обратная связь</h1>
+        <p class="page-desc">Нажмите на кнопку ниже, чтобы открыть форму обратной связи и отправить сообщение.</p>
+        <button type="button" id="open-form-btn" class="primary-btn">Открыть форму</button>
+    </main>
+
+    <div id="feedback-modal" class="modal-overlay is-hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">Форма обратной связи</h2>
+                <button type="button" id="close-form-btn" class="close-btn" aria-label="Закрыть форму">&times;</button>
+            </div>
+
+            <form id="feedback-form" action="https://formcarry.com/s/Wix-1Tj-wBA" method="POST">
+                <div class="field-group">
+                    <label for="fullname">ФИО *</label>
+                    <input type="text" id="fullname" name="fullname" required autocomplete="name" placeholder="Иванов Иван Иванович">
+                </div>
+
+                <div class="form-row">
+                    <div class="field-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@mail.ru">
+                    </div>
+
+                    <div class="field-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+7 (999) 123-45-67">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="organization">Организация</label>
+                    <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Название организации">
+                </div>
+
+                <div class="field-group">
+                    <label for="message">Сообщение *</label>
+                    <textarea id="message" name="message" rows="3" required placeholder="Введите ваше сообщение"></textarea>
+                </div>
+
+                <label class="checkbox-item" for="consent">
+                    <input type="checkbox" id="consent" name="consent" value="yes" required>
+                    <span>Я согласен(а) с политикой обработки персональных данных *</span>
+                </label>
+
+                <div id="form-status" class="status-msg" aria-live="polite"></div>
+
+                <button type="submit" id="submit-btn" class="submit-btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
